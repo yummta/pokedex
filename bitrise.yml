@@ -26,7 +26,7 @@ workflows:
         - project_location: $BITRISE_FLUTTER_PROJECT_LOCATION
     - flutter-test@1:
         inputs:
-        - project_location: $BITRISE_FLUTTER_PROJECT_LOCATION
+        - additional_params: test/
     - flutter-build@0:
         inputs:
         - project_location: $BITRISE_FLUTTER_PROJECT_LOCATION
@@ -48,6 +48,6 @@ workflows:
     - cache-pull@2: {}
     - flutter-test@1:
         inputs:
-        - project_location: $BITRISE_FLUTTER_PROJECT_LOCATION
+        - additional_params: test/
     - cache-push@2: {}
     - deploy-to-bitrise-io@2: {}
